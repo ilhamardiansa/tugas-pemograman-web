@@ -133,13 +133,15 @@ body {
 
 /* About Us Section */
 .about, 
-.Product {
+.Product,
+.Contact {
   padding: 128px 7% 22px;
   color: #000000;
 }
 
 .about h2, 
-.Product {
+.Product,
+.Contact {
   text-align: center;
   font-size: 41px;
   margin-bottom: 48px;
@@ -172,6 +174,51 @@ body {
   font-size: 18px;
   font-weight: 300;
   line-height: 25px;
+}
+
+
+
+/*contact*/
+.social-media-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-media-box {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  width: 200px;
+  height: 150px;
+  font-size: medium;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  text-size-adjust: 20px;
+}
+
+.social-media-box:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-media-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.social-media-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.social-media-link:hover {
+  color: #000;
 }
 
 /* Media Queries */
@@ -251,4 +298,5 @@ body {
   html {
     font-size: 55%;
   }
+}
 }
