@@ -133,17 +133,17 @@ body {
 
 /* About Us Section */
 .about, 
-.Product,
+.Product, 
 .Contact {
-  padding: 128px 7% 22px;
+  padding: 110px 7% 22px;
   color: #000000;
 }
 
 .about h2, 
-.Product,
-.Contact {
+.Product h2, 
+.Contact h2 {
   text-align: center;
-  font-size: 41px;
+  font-size: 35px;
   margin-bottom: 48px;
 }
 
@@ -155,18 +155,23 @@ body {
   flex: 1 1 720px;
 }
 
-.about .row /.about-img img {
-  width: 50%;
+.about .row .about-img img {
+  max-width: 90%;
+  height: 80%;
+  border-radius: 10%;
+  margin-left: 15%;
 }
 
 .about .row .content {
   flex: 1 1 560px;
   padding: 0 10px;
+  text-align: center;
 }
 
 .about .row .content h3 {
   font-size: 28px;
   margin-bottom: 10px;
+  margin-top: 8%;
 }
 
 .about .row .content p {
@@ -174,7 +179,9 @@ body {
   font-size: 18px;
   font-weight: 300;
   line-height: 25px;
+  margin-top: 5%;
 }
+
 
 .containers {
   display: grid;
@@ -250,7 +257,8 @@ p {
   background-color: var(--primary); 
 }
 
-/*contact*/
+
+/*FindUS*/
 .social-media-container {
   display: flex;
   justify-content: space-around;
@@ -291,6 +299,35 @@ p {
 
 .social-media-link:hover {
   color: #000;
+}
+
+.Contact .row {
+  display: flex;
+  margin-top: 32px;
+  background-color: #fe7ea9;
+  flex-wrap: wrap;
+}
+
+.Contact .row form {
+  flex: 1 1 720px;
+  padding: 80px 32px;
+  text-align: center;
+}
+
+.Contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+  background-color: var(--primary);
+  border: 1px solid #fff;
+  padding-left: 32px;
+}
+
+.Contact .row form .input-group input {
+  width: 100%;
+  padding: 32px;
+  font-size: 27px;
+  background-color: none;
 }
 
 /* Media Queries */
@@ -370,5 +407,4 @@ p {
   html {
     font-size: 55%;
   }
-}
 }
