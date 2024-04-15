@@ -176,7 +176,68 @@ body {
   line-height: 25px;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 20px;
+  padding: 20px;
+}
 
+@media screen and (min-width: 1440px) {
+  .container {
+    grid-template-columns: repeat(5, minmax(calc(16.666% - 20px), 1fr)); 
+  }
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.gambar {
+  max-width: 100%; /* Membuat gambar responsif */
+  height: 250px; /* Menjaga aspek rasio gambar */
+  border-radius: 10px;
+  object-fit: cover; /* Memastikan gambar terisi sepenuhnya dan tidak terdistorsi */
+  align-self: center; /* Memastikan gambar berada di tengah kotak */
+}
+
+
+h6 {
+  font-size: 20px;
+  margin: 10px 0;
+  align-self: flex-start;
+}
+
+p {
+  font-size: 16px; 
+  margin: 5px 0; 
+  align-self: flex-start;
+}
+
+.checkout-btn {
+  margin-top: 10px;
+  background-color: rgba(251, 132, 172, 0.8);
+  color: white; 
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  transition: background-color 0.3s ease; 
+  align-self: flex-start;
+}
+
+.checkout-btn:hover {
+  background-color: var(--primary); 
+}
 
 /*contact*/
 .social-media-container {
