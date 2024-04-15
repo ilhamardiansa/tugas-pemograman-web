@@ -176,6 +176,13 @@ body {
   line-height: 25px;
 }
 
+.containers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr)); 
+  gap: 20px;
+  padding: 20px;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
@@ -186,6 +193,10 @@ body {
 @media screen and (min-width: 1440px) {
   .container {
     grid-template-columns: repeat(5, minmax(calc(16.666% - 20px), 1fr)); 
+  }
+
+  .containers {
+    grid-template-columns: repeat(4, minmax(calc(16.666% - 20px), 1fr)); 
   }
 }
 
