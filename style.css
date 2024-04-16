@@ -17,7 +17,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #ffffff;
-  min-height: 3000px;
+  min-height: 4000px;
 }
 
 /* Navbar */
@@ -78,6 +78,89 @@ body {
 #hamburger-menu {
   display: none;
 }
+
+/*navbar search form*/
+.navbar .search-form {
+  position: absolute;
+  top: 105%;
+  right: 5%;
+  background-color: #fff;
+  width: 260px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: right;
+  transition: 0.7s;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  color: var(--other);
+  padding: 16px;
+}
+
+
+/*Shopping Cart */
+  .shopping-cart {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #ffffff;
+    width: 480px;
+    height: 1080px;
+    padding: 0 1.5rem;
+    color: var(--other);
+    transition: 0.3s;
+  }
+
+
+  .shopping-cart.active {
+    right: 0;
+  }
+
+
+.shopping-cart .cart-item {
+  margin: 32px 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed #333232;
+  position: relative;
+}
+
+
+.shopping-cart img {
+  height: 96px;
+  border-radius: 10%;
+}
+
+.shopping-cart h3 {
+  font-size: 20px;
+  padding-bottom: 0.5rem;
+}
+
+.shopping-cart .item-price {
+  font-size: 15px;
+}
+
+.shopping-cart .remove-item {
+  position: absolute;
+  right: 16px;
+  cursor: pointer;
+}
+
+.shopping-cart .remove-item:hover{
+color: var(--primary);
+}
+
 
 /* Hero Section */
 .hero {
@@ -159,7 +242,7 @@ body {
   max-width: 90%;
   height: 80%;
   border-radius: 10%;
-  margin-left: 15%;
+  margin-left: 11%;
 }
 
 .about .row .content {
@@ -300,35 +383,12 @@ p {
 .social-media-link:hover {
   color: #000;
 }
-
-.Contact .row {
-  display: flex;
-  margin-top: 32px;
-  background-color: #fe7ea9;
-  flex-wrap: wrap;
+ 
+.Contact h2 {
+  margin-bottom: 20px;
 }
 
-.Contact .row form {
-  flex: 1 1 720px;
-  padding: 80px 32px;
-  text-align: center;
-}
 
-.Contact .row form .input-group {
-  display: flex;
-  align-items: center;
-  margin-top: 32px;
-  background-color: var(--primary);
-  border: 1px solid #fff;
-  padding-left: 32px;
-}
-
-.Contact .row form .input-group input {
-  width: 100%;
-  padding: 32px;
-  font-size: 27px;
-  background-color: none;
-}
 
 /* Media Queries */
 
@@ -378,6 +438,11 @@ p {
 .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
   }
+
+.navbar .search-form {
+  width: 90%;
+  right: 32px;
+}
 
   .about .row {
     flex-wrap: wrap;
