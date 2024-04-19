@@ -17,7 +17,8 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- My Style-->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 
@@ -115,73 +116,73 @@
     <!-- About Us Section end -->
 
     <!-- Our Product Section start -->
-    <section id="Product" class="Product">
+    <section id="Product" class="Product" >
       <h2>Our Product</h2>
       <div class="container">
-        <div class="box">
+        <div class="box" data-name="Polo Dress">
           <img src="gambar/foto1.jpg" alt="Gambar" class="gambar">
           <h6>Polo Dress</h6>
           <p>Basic dress yang memiliki tampilan yg casual dapat dipakai hangout/ daily</p>
           <p>Harga: Rp 155.000</p>
           <button class="checkout-btn">Checkout</button>
         </div>
-        <div class="box">
+        <div class="box" data-name="Mozza Couple Shirt">
           <img src="gambar/foto2.jpg" alt="Gambar" class="gambar">
           <h6>Mozza Couple Shirt</h6>
           <p>Kemeja motif berbahan catton rayon yang super dingin dan menyerap keringat</p>
           <p>Harga : Rp 85.000</p>
           <button class="checkout-btn">Checkout</button>
         </div>
-        <div class="box">
+        <div class="box" data-name="Daisy Pashtan Anak">
           <img src="gambar/foto3.jpg" alt="Gambar" class="gambar">
           <h6>Daisy Pashtan Anak</h6>
           <p>Pashmina instan anak dengan aksen bunga Daisy di atas hijabnya (baby usia 1-5 th)</p>
           <p>Harga: Rp 39.000</p>
           <button class="checkout-btn">Checkout</button>
         </div>
-        <div class="box">
+        <div class="box" data-name="Kyla Pashtan Topi">
           <img src="gambar/foto4.jpg" alt="Gambar" class="gambar">
           <h6>Kyla Pashtan Topi</h6>
           <p>Pashmina instan anak dilengkapi cap, melindungi si kecil saat berkegiatan outdoor </p>
           <p>Harga : Rp 45.000</p>
           <button class="checkout-btn">Checkout</button>
         </div>
-        <div class="box">
+        <div class="box" data-name="Bergo Alika">
           <img src="gambar/foto5.jpg" alt="Gambar" class="gambar">
           <h6>Bergo Alika</h6>
           <p>Hijab yang menggunakan bahan jersey ITY Import (stretch,ringan,dan ngga bikin gerah)</p>
           <p>Harga : Rp 38.000</p>
           <button class="checkout-btn">Checkout</button>
         </div>
-        <div class="box">
+        <div class="box" data-name="Asha Bergo">
           <img src="gambar/foto6.jpg" alt="Gambar" class="gambar">
           <h6>Asha Bergo</h6>
           <p>Produk ini sudah menggunakan bahan Jersey ITY import korea</p>
           <p>Harga : Rp 39.000</p>
           <button class="checkout-btn">Checkout</button>
         </div>
-        <div class="box">
+        <div class="box" data-name="Amala Bergo">
           <img src="gambar/foto7.jpg" alt="Gambar" class="gambar">
           <h6>Amala Bergo</h6>
           <p>AMALA Bergo instan menggunakan bahan jersey ITY Import</p>
           <p>Harga : Rp 39.000</p>
           <button class="checkout-btn">Checkout</button>
         </div>
-        <div class="box">
+        <div class="box" data-name="Ziya Instant">
           <img src="gambar/foto8.jpg" alt="Gambar" class="gambar">
           <h6>Ziya Instant</h6>
           <p>Ziya instant hijab instan super sat set</p>
           <p>Harga : Rp 59.000</p>
           <button class="checkout-btn">Checkout</button>
         </div>
-        <div class="box">
+        <div class="box" data-name="Scrunchie Korea">
           <img src="gambar/foto9.jpg" alt="Gambar" class="gambar">
           <h6>Scrunchie Korea</h6>
           <p>ikat rambut dengan bahan kaos jersey premium</p>
           <p>Harga : Rp 3.000</p>
           <button class="checkout-btn">Checkout</button>
         </div>
-        <div class="box">
+        <div class="box" data-name="SCRUNCHIE Cepol">
           <img src="gambar/foto10.jpg" alt="Gambar" class="gambar">
           <h6>SCRUNCHIE Cepol</h6>
           <p>ikat rambut dengan bahan diamond</p>
@@ -259,7 +260,22 @@
       feather.replace();
     </script>
 
+<script>
+  $(document).ready(function(){
+    $("#search-box").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      if (value === "") {
+        $(".box").show();
+      } else {
+        $(".box").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      }
+    });
+  });
+</script>
+
     <!-- My Javascript -->
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
