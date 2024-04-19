@@ -107,60 +107,6 @@ body {
 }
 
 
-/*Shopping Cart */
-  .shopping-cart {
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    background-color: #ffffff;
-    width: 480px;
-    height: 1080px;
-    padding: 0 1.5rem;
-    color: var(--other);
-    transition: 0.3s;
-  }
-
-
-  .shopping-cart.active {
-    right: 0;
-  }
-
-
-.shopping-cart .cart-item {
-  margin: 32px 0;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding-bottom: 16px;
-  border-bottom: 1px dashed #333232;
-  position: relative;
-}
-
-
-.shopping-cart img {
-  height: 96px;
-  border-radius: 10%;
-}
-
-.shopping-cart h3 {
-  font-size: 20px;
-  padding-bottom: 0.5rem;
-}
-
-.shopping-cart .item-price {
-  font-size: 15px;
-}
-
-.shopping-cart .remove-item {
-  position: absolute;
-  right: 16px;
-  cursor: pointer;
-}
-
-.shopping-cart .remove-item:hover{
-color: var(--primary);
-}
-
 
 /* Hero Section */
 .hero {
