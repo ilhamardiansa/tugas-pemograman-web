@@ -17,7 +17,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #ffffff;
-  min-height: 3000px;
+  min-height: 4000px;
 }
 
 /* Navbar */
@@ -79,6 +79,35 @@ body {
   display: none;
 }
 
+/*navbar search form*/
+.navbar .search-form {
+  position: absolute;
+  top: 105%;
+  right: 5%;
+  background-color: #fff;
+  width: 260px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: right;
+  transition: 0.7s;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  color: var(--other);
+  padding: 16px;
+}
+
+
+
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -133,17 +162,17 @@ body {
 
 /* About Us Section */
 .about, 
-.Product,
+.Product, 
 .Contact {
-  padding: 128px 7% 22px;
+  padding: 110px 7% 22px;
   color: #000000;
 }
 
 .about h2, 
-.Product,
-.Contact {
+.Product h2, 
+.Contact h2 {
   text-align: center;
-  font-size: 41px;
+  font-size: 35px;
   margin-bottom: 48px;
 }
 
@@ -155,18 +184,23 @@ body {
   flex: 1 1 720px;
 }
 
-.about .row /.about-img img {
-  width: 50%;
+.about .row .about-img img {
+  max-width: 90%;
+  height: 80%;
+  border-radius: 10%;
+  margin-left: 11%;
 }
 
 .about .row .content {
   flex: 1 1 560px;
   padding: 0 10px;
+  text-align: center;
 }
 
 .about .row .content h3 {
   font-size: 28px;
   margin-bottom: 10px;
+  margin-top: 8%;
 }
 
 .about .row .content p {
@@ -174,7 +208,9 @@ body {
   font-size: 18px;
   font-weight: 300;
   line-height: 25px;
+  margin-top: 5%;
 }
+
 
 .containers {
   display: grid;
@@ -250,7 +286,8 @@ p {
   background-color: var(--primary); 
 }
 
-/*contact*/
+
+/*FindUS*/
 .social-media-container {
   display: flex;
   justify-content: space-around;
@@ -292,6 +329,12 @@ p {
 .social-media-link:hover {
   color: #000;
 }
+ 
+.Contact h2 {
+  margin-bottom: 20px;
+}
+
+
 
 /* Media Queries */
 
@@ -342,6 +385,11 @@ p {
     transform: scaleX(0.2);
   }
 
+.navbar .search-form {
+  width: 90%;
+  right: 32px;
+}
+
   .about .row {
     flex-wrap: wrap;
   }
@@ -370,5 +418,4 @@ p {
   html {
     font-size: 55%;
   }
-}
 }
